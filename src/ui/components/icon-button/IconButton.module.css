@@ -1,0 +1,7 @@
+.icon-button {
+    @apply rounded-full w-12 aspect-square active:bg-white active:bg-opacity-30 flex items-center justify-center;
+}
+
+.icon-button svg {
+    @apply fill-white w-4;
+}

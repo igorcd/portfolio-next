@@ -1,0 +1,46 @@
+.control-centre {
+    @apply h-10 lg:h-7 fixed transition-all duration-300 z-50
+           top-3 lg:top-0 w-[calc(100%-1.5rem)] lg:w-[calc(100%-4.5rem)] left-3 lg:left-9
+           rounded-full lg:rounded-t-none lg:rounded-b-[1.25rem]
+           bg-black/80 shadow-100;
+}
+
+.--opened {
+    @apply !w-12 h-40;
+}
+
+.control-centre__wrapper {
+    @apply flex items-center relative w-[calc(100vw-1.5rem)] lg:w-full h-10 lg:h-7;
+}
+
+.control-centre__menu-button {
+    @apply lg:hidden rotate-0 duration-300 mx-1;
+}
+
+.--opened .control-centre__menu-button {
+    @apply  -rotate-90 translate-y-1.5;
+}
+
+.control-centre__logo {
+    @apply flex items-center absolute lg:static left-1/2 -translate-x-1/2 lg:translate-x-0 px-4 lg:pr-0 lg:!opacity-100 transition-opacity duration-300;
+}
+
+.control-centre__logo img {
+    @apply w-6 lg:w-4;
+}
+
+.control-centre__logo p {
+    @apply text-sm lg:text-[0.75rem] text-white font-bold mx-1.5 whitespace-nowrap overflow-hidden overflow-ellipsis;
+}
+
+.--opened .control-centre__logo  {
+    @apply opacity-0;
+}
+
+.control-centre__clock {
+    @apply me-4 lg:mr-6 ms-2 lg:!opacity-100 transition-opacity duration-300 text-white text-xs font-bold;
+}
+
+.--opened .control-centre__clock {
+    @apply opacity-0;
+}

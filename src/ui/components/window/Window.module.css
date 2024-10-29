@@ -1,0 +1,11 @@
+.window {
+    @apply fixed bg-black/70 rounded-md shadow-50 border border-white/20 transition-opacity duration-300
+           max-sm:!left-0 max-sm:!top-0 max-sm:!w-screen max-sm:!h-screen max-sm:rounded-none max-sm:border-none;
+    transition: opacity 150ms, transform 150ms;
+}
+.--maximized {
+    @apply !left-0 !top-0 !w-screen !h-screen rounded-none border-none !z-40;
+}
+.--minimized {
+    @apply opacity-0 translate-y-60 scale-75 pointer-events-none;
+}
